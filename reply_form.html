@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Reply</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Reply</h1>
+    <p>I'd love to hear your thoughts on my letter. Feel free to write here!</p>
+    <textarea id="reply" placeholder="Type your reply here..."></textarea><br>
+    <button onclick="sendReply()">Send Reply</button>
+  </div>
+
+  <script>
+    function sendReply() {
+      const reply = document.getElementById('reply').value;
+      if (reply) {
+        alert('Thank you for your reply!');  // In a real site, you'd send this to a server
+        document.getElementById('reply').value = '';  // Clears the text box
+      } else {
+        alert('Please write something!');
+      }
+    }
+  </script>
+</body>
+</html>
